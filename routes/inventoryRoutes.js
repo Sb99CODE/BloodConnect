@@ -1,5 +1,5 @@
 const express = require("express");
-const authMiddelware = require("../middlewares/authMiddelware");
+const authMiddleware = require("../middlewares/authMiddleware");
 const {
   createInventoryController,
   getInventoryController,
@@ -15,37 +15,37 @@ const router = express.Router();
 
 //routes
 // ADD INVENTORY || POST
-router.post("/create-inventory", authMiddelware, createInventoryController);
+router.post("/create-inventory", authMiddleware, createInventoryController);
 
 //GET ALL BLOOD RECORDS
-router.get("/get-inventory", authMiddelware, getInventoryController);
+router.get("/get-inventory", authMiddleware, getInventoryController);
 //GET RECENT BLOOD RECORDS
 router.get(
   "/get-recent-inventory",
-  authMiddelware,
+  authMiddleware,
   getRecentInventoryController
 );
 
 //GET HOSPITAL BLOOD RECORDS
 router.post(
   "/get-inventory-hospital",
-  authMiddelware,
+  authMiddleware,
   getInventoryHospitalController
 );
 
 //GET Donor RECORDS
-router.get("/get-donors", authMiddelware, getDonorsController);
+router.get("/get-donors", authMiddleware, getDonorsController);
 
 //GET HOSPITAL RECORDS
-router.get("/get-hospitals", authMiddelware, getHospitalController);
+router.get("/get-hospitals", authMiddleware, getHospitalController);
 
 //GET organisation RECORDS
-router.get("/get-organisation", authMiddelware, getOrganisationController);
+router.get("/get-organisation", authMiddleware, getOrganisationController);
 
 //GET organisation RECORDS
 router.get(
   "/get-organisation-for-hospital",
-  authMiddelware,
+  authMiddleware,
   getOrganisationForHospitalController
 );
 
