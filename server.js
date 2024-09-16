@@ -13,10 +13,7 @@ const app = express();
 
 //middlewares
 app.use(express.json());
-app.use(cors({
-  origin: "https://bloodconnect-client.onrender.com",
-  credentials: true,
-}));
+app.use(cors());
 app.use(morgan("dev"));
 
 //routes
